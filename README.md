@@ -1,3 +1,13 @@
+# !!! UNSTABLE ALPHA TEST PROJECT !!!
+
+I Will update this Page as the work progresses.
+
+# Unofficial Plebian Trixie Migration Path for SoQuartz Blade Board
+
+This Project is for test purposes only. The purpose of this test is to validate the SoQuartz Blade Hardware for Trixie. I do not have any other devices to validate Trixie. So Treat this as a Soquartz Blade Upgrade Only.
+
+
+
 # Plebian Quartz64 Images
 
 This repository contains the GitHub workflow files and debos recipes to create
