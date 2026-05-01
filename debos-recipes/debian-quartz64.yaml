@@ -19,12 +19,12 @@ actions:
     mirror: {{ $mirror }}
 
   - action: run
-    description: Enable Trixie security repo
+    description: Enable Trixie repo
     chroot: true
     command: |
       echo "" >> /etc/apt/sources.list
-      echo "# Trixie security repo" >> /etc/apt/sources.list
-      echo "deb http://security.debian.org/debian-security"trixie-security main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+      echo "# Trixie repo" >> /etc/apt/sources.list
+      echo "deb http://deb.debian.org/debian/ trixie main contrib non-free non-free-firmware" >> /etc/apt/sources.list
 
   - action: run
     description: Enable Trixie updates repo
@@ -32,7 +32,31 @@ actions:
     command: |
       echo "" >> /etc/apt/sources.list
       echo "# Trixie updates repo" >> /etc/apt/sources.list
-      echo "deb http://deb.debian.org/debian"trixie-updates main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+      echo "deb http://deb.debian.org/debian/ trixie-updates main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+
+  - action: run
+    description: Enable Trixie proposed updates repo
+    chroot: true
+    command: |
+      echo "" >> /etc/apt/sources.list
+      echo "# Trixie proposed-updates repo" >> /etc/apt/sources.list
+      echo "deb http://deb.debian.org/debian/ trixie-proposed-updates main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+
+  - action: run
+    description: Enable Trixie backports repo
+    chroot: true
+    command: |
+      echo "" >> /etc/apt/sources.list
+      echo "# Trixie backports repo" >> /etc/apt/sources.list
+      echo "deb http://deb.debian.org/debian/ trixie-backports main contrib non-free non-free-firmware" >> /etc/apt/sources.list
+
+  - action: run
+    description: Enable Trixie security repo
+    chroot: true
+    command: |
+      echo "" >> /etc/apt/sources.list
+      echo "# Trixie security repo" >> /etc/apt/sources.list
+      echo "deb http://security.debian.org/debian-security/ trixie-security main contrib non-free non-free-firmware" >> /etc/apt/sources.list
 
   - action: overlay
     description: Copy Plebian keyring
