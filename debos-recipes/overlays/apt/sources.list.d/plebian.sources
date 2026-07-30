@@ -1,5 +1,5 @@
 Types: deb
 URIs: https://aptly.fratti.ch/debian/
-Suites: trixie
+Suites: bookworm
 Components: main
 Signed-By: /usr/share/keyrings/plebian-build-key.gpg
