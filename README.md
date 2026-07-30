@@ -6,7 +6,13 @@ I Will update this Page as the work progresses.
 
 This Project is for testing purposes only. The purpose of this test is to validate the SoQuartz Blade Hardware for Trixie. I do not have any other devices to validate Trixie. So Treat this as a Soquartz Blade Upgrade Only.
 
+# Trixie Script
 
+I have created a simple shell script that will convert an existing bookworm build to trixie. This is not magic and will not do anthing more than update your existing system. It does have a driver issue with bluetooth that slows the boot process by about 30s. 
+
+I offer this script as a jumping off point with no warranty and caution you to do your own due dilligence in using it. 
+
+Testing shows it works, but, I have not done much in the way of validation, yet.
 
 # Plebian Quartz64 Images
 
