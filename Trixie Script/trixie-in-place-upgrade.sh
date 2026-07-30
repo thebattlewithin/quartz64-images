@@ -1,9 +1,11 @@
 #!/bin/sh
 
-##    Run this program as root "sudo su -". this will help avoid and permissions issues
-## during the upgrade process. 
-##    The resulting changes may somehow cause an error with the bluetooth drivers during POST
-## and results in a 30-60 second pause somewhere betwen line 34.0 and 41.0 on Startup
+##    Created by thebattlewithin
+##    
+##    
+##
+##    Run this program as root "sudo su -". this will help avoid and permissions issues during the upgrade process. 
+##    The resulting changes may somehow cause an error with the bluetooth drivers during POST and results in a 30-60 second pause somewhere betwen line 34.0 and 41.0 on Startup
 ##    The system appears unaffected otherwise.
 ##    The Sleep commands can be commented out if you find them annoying. They are just to make thing a bit more playful.
 ##    
@@ -67,6 +69,9 @@ echo "updating sources.list by changing Bookworm/bookworm to Trixie/trixie"
 
 ## Finds and Replaces train “bookworm” with “trixie” case-sensitive
 sudo sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
+
+## uncomment line below to upgrade an existing docker install as well
+# sudo sed -i 's/bookworm/trixie/g' /etc/apt/sources.list.d/docker.list
 
 ## Finds and Replaces Title/comment of “Bookworm” with “Trixie” case-sensitive
 sudo sed -i 's/Bookworm/Trixie/g' /etc/apt/sources.list
